@@ -1,0 +1,5 @@
+# Modulo6_practicaP2P
+
+
+if [[ $entrada =~ $es_numero ]] 
+

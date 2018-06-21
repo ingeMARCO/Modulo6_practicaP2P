@@ -1,7 +1,5 @@
 # Modulo6_practicaP2P
-
 #!/bin/bash
-###
 ###
 ##menu="$1"
 echo "------"
@@ -10,46 +8,38 @@ echo "------"
 ########
 comando2="cal"
 ##menu="$1"
-
-fMes=$(date +"%-m")
-fAnio=$(date +"%Y")
-Mes=$fMes
-Anio=$fAnio
+fMonth=$(date +"%-m")
+fYear=$(date +"%Y")
+Month=$fMonth
+Year=$fYear
 
 #read menu
 
 case $# in
-         0)     $comando2 $Mes $Anio
-                echo " $Mes $Anio fecha Mes actual sin datos "
-                echo " $Mes  $fecha es el mes correcto"
+         0)     $comando2 $Month $Year
+                echo " $Month $Year fecha básica actual del Mes "
+                echo " $Month $fecha correcto!"
         ;;
 ##mes 1 año actual
          1)   if [ $1 = 1 ]
                   then
-
-                       $comando2 $1 $Anio
-                   echo "$fecha  mes $1 actuali con datos"
-
+                       $comando2 $1 $Year
+                   echo "$fecha  mes $1 exacta corregida"
          ##ene
               elif [ "$1" = "ene" ]
                  then
-
-                         $comando2 1 $Anio
-                  echo "Dos >> ($1) $Mes $Anioi"
+                         $comando2 1 $Year
+                  echo "Dos >> ($1) $Month $Yeari"
               ##jan
                 elif [ "$1" = "jan" ]
                   then
-
-                        $comando2 1 $Anio
+                        $comando2 1 $Year
                    echo "Jan $1"
-
         ### 2018
                elif [ $1 -eq 2018 ]
                     then
                     $comando2
                     echo "Año $1"
-
-
         ##ayuda
                elif [ "$1" == "-h" ]
                     then
@@ -63,4 +53,3 @@ case $# in
                         echo "Año 1 primero"
                 fi;;
 echo "finished"
-

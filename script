@@ -4,18 +4,17 @@
 ###
 ###
 ##menu="$1"
-echo "######"
+echo "------"
 #$comando2 $1 $2
 #########
 ########
-
 comando2="cal"
 ##menu="$1"
 
-fechaMes=$(date +"%-m")
-fechaAnio=$(date +"%Y")
-Mes=$fechaMes
-Anio=$fechaAnio
+fMes=$(date +"%-m")
+fAnio=$(date +"%Y")
+Mes=$fMes
+Anio=$fAnio
 
 #read menu
 
@@ -57,9 +56,7 @@ case $# in
                     echo "esta es la ayuda 1.0"
                     echo "digita los valores ./archivo variable variable"
                     echo " ./archivo 1 2018"
-
         fi;;
-
         2)      if [ $1 -eq $2 ]
                         then
                         $comando2 1 1

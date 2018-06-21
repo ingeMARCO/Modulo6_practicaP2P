@@ -5,8 +5,6 @@
 ###
 ##menu="$1"
 echo "######"
-echo "###### Ejercicio 6.5 en Miriadax.net"
-echo "######"
 #$comando2 $1 $2
 #########
 ########
@@ -67,7 +65,5 @@ case $# in
                         $comando2 1 1
                         echo "Año 1 primero"
                 fi;;
-
-
-esac
+echo "finished"
 

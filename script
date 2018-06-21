@@ -1,5 +1,73 @@
 # Modulo6_practicaP2P
 
+#!/bin/bash
+###
+###
+##menu="$1"
+echo "######"
+echo "###### Ejercicio 6.5 en Miriadax.net"
+echo "######"
+#$comando2 $1 $2
+#########
+########
 
-if [[ $entrada =~ $es_numero ]] 
+comando2="cal"
+##menu="$1"
+
+fechaMes=$(date +"%-m")
+fechaAnio=$(date +"%Y")
+Mes=$fechaMes
+Anio=$fechaAnio
+
+#read menu
+
+case $# in
+         0)     $comando2 $Mes $Anio
+                echo " $Mes $Anio fecha Mes actual sin datos "
+                echo " $Mes  $fecha es el mes correcto"
+        ;;
+##mes 1 año actual
+         1)   if [ $1 = 1 ]
+                  then
+
+                       $comando2 $1 $Anio
+                   echo "$fecha  mes $1 actuali con datos"
+
+         ##ene
+              elif [ "$1" = "ene" ]
+                 then
+
+                         $comando2 1 $Anio
+                  echo "Dos >> ($1) $Mes $Anioi"
+              ##jan
+                elif [ "$1" = "jan" ]
+                  then
+
+                        $comando2 1 $Anio
+                   echo "Jan $1"
+
+        ### 2018
+               elif [ $1 -eq 2018 ]
+                    then
+                    $comando2
+                    echo "Año $1"
+
+
+        ##ayuda
+               elif [ "$1" == "-h" ]
+                    then
+                    echo "esta es la ayuda 1.0"
+                    echo "digita los valores ./archivo variable variable"
+                    echo " ./archivo 1 2018"
+
+        fi;;
+
+        2)      if [ $1 -eq $2 ]
+                        then
+                        $comando2 1 1
+                        echo "Año 1 primero"
+                fi;;
+
+
+esac
 
